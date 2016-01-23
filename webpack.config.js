@@ -7,16 +7,22 @@ var config = {
     'webpack-dev-server/client?http://localhost:3000',
     './src/main.js'
   ],
+  resolve: {
+    root: [
+      path.resolve(__dirname, './src')
+    ],
+    extensions: ['', '.js', '.json', '.jsx']
+  },
   output : {
     path : path.resolve(__dirname, 'dist'),
     filename : 'bundle.js'
   },
-  modules : {
+  module: {
     loaders : [
       {
-        test : /\.js$/,
-        loaders : ['babel'],
-        exclude : /node_modules/
+        test : /\.js?$/,
+        loader : 'babel',
+        exclude : /(node_modules|bower_components)/
       }
     ]
   }

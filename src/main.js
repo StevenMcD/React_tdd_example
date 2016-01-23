@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 
 class Root extends Component {
   render() {
-    return <h1> Howzit </h1>;
+    return <h1> Hello World </h1>;
   }
 }
 
