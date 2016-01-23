@@ -1,0 +1,24 @@
+{
+  "name": "react_tdd_example",
+  "version": "0.0.1",
+  "description": "Test driven example from a blogpost written by Spencer Dixon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StevenMcD/React_tdd_example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StevenMcD/React_tdd_example/issues"
+  },
+  "homepage": "https://github.com/StevenMcD/React_tdd_example#readme",
+  "devDependencies": {
+    "babel-core": "^6.4.5",
+    "babel-loader": "^6.2.1",
+    "webpack": "^1.12.11"
+  }
+}
