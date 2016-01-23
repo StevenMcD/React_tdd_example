@@ -33,5 +33,32 @@ describe('(Component) CommentList', () => {
 
       expect(props.onMount.calledOnce).to.be.true;
     });
+
+    it('should render as a <ul>', () => {
+      const props = { onMount: ()=>{} };
+      const wrapper = shallow(<CommentList {...props} />);
+      expect(wrapper.type()).to.eql('ul');
+    });
+
+    describe('when active...', ()=> {
+      const wrapper = shallow(
+        <CommentList onMount={() => {}} isActive />
+      );
+
+      it('should render with className active-list', ()=> {
+        expect(wrapper.prop('className')).to.eql('active-list');
+      });
+    });
+
+    describe('when inactive...', ()=> {
+      const wrapper = shallow(
+        <CommentList onMount={()=>{}} isActive={false} />
+      );
+
+      it('should render with className inactive-list', ()=>{
+        expect(wrapper.prop('className')).to.eql('inactive-list');
+      });
+    });
+
   });
 });
