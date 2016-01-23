@@ -1,6 +1,6 @@
 import React from 'react';
 
-import CommentList from '../../src/components/CommentList';
+import CommentList from 'components/CommentList';
 import {
   describeWithDOM,
   mount,
